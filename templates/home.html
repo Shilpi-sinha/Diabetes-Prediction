@@ -1,0 +1,66 @@
+<html>
+	<head></head>
+	<body bgcolor= "pink">
+		<center><h1 style"font-size:300%;">DIABETES PREDICTION</h1></center>
+		
+		<form action=" {{ url_for('predict')}}" method="post">
+		
+			<table border="0" align="center">
+				<tr>
+					<th>No. of Pregnancies</th>
+					<td><input type="text" name="pregnancy"></td>
+				</tr>
+				<tr>	
+					<th>Glucose:</th>
+				
+					<td><input type="text" name="Glucose" /></td>
+				</tr>
+				<tr>
+					<th>BloodPressure(mm Hg):</th>
+					<td><input type="text" name="BloodPressure"/></td>
+				</tr>
+				<tr>
+					<th>SkinThickness (mm):</th>
+					<td><input type="text" name="SkinThickness" /></td>
+				</tr>
+				<tr>
+					<th>Insulin (mu U/ml):</th> 
+					<td><input type="text" name="Insulin"></td>
+				</tr>
+				<tr>
+					<th>BMI:</th>
+					<td><input type="text" name="BMI"></td>
+				</tr>
+				<tr>
+					<th>DiabetesPedigreeFunction:</th>
+					<td><input type="text" name="DiabetesPedigreeFunction"></td>
+				</tr>
+				<tr>
+					<th>Age:</th>
+					<td><input type="text" name="Age"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+							<button type="submit">Predict</button>
+					
+				</td>
+			
+			</table>
+		</form>
+		
+		
+		
+		
+	
+		<br>
+		<br>
+			<center> <strong>{{ prediction_text }}</strong></center>		
+		<div style="position: relative">
+			<p style="position:fixed;bottom: 0; text-align: center">@2020 Shilpi Sinha</p>
+		</div>
+	
+	
+	
+	</body>
+	
+</html>
